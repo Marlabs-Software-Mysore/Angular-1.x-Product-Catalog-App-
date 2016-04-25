@@ -1,0 +1,35 @@
+<style>
+   .error{
+       color: red;
+   }
+</style>
+<div class="container">
+    <h2>Add Product</h2>
+    <div class="col-md-4">
+        
+     <form class="form-horizontal" name="form" role="form" novalidate>
+            <div class="alert alert-success" ng-show="message!=''">{{message}}</div>
+            <div class="form-group">
+                <label class="control-label">Product Name</label>
+                <input type="text" class="form-control" ng-model="newProduct.Name" id="Name" name="Name" placeholder="Product Name" required />
+                <span class="error" ng-show="form.Name.$touched && form.Name.$invalid">Please enter product name</span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Description</label>
+                <textarea ng-model="newProduct.Description" name="description" id="description" class="form-control" placeholder="Product Description" required cols="30" rows="06"></textarea>
+                <span class="error" ng-show="form.description.$touched && form.description.$invalid">Please enter product description</span>
+            </div>
+            <div class="form-group" >
+                <label class="control-label">Price(Per Unit)</label>
+                <input type="number" class="form-control" ng-model="newProduct.Price" id="price" name="price" placeholder="Product Price" required />
+                <span class="error" ng-show="form.price.$touched && form.price.$invalid">Please enter product price</span>
+            </div>
+            <div class="form-group">
+            <button class="btn btn-primary right" ng-disabled="form.$invalid" ng-click="AddProduct()">
+               Add 
+            </button>
+            <a href="#/" class="btn btn-link">Cancel</a> 
+            </div>   
+    </form>
+    </div>
+</div>
