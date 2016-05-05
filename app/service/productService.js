@@ -13,6 +13,7 @@ angular.module('mystore')
         }
     }
     
+    // Get Products
     this.GetProducts = function() {
         var savedprod = localStorageService.get("products");
         var products = savedprod!==null?JSON.parse(savedprod):null;
