@@ -4,20 +4,20 @@
     <div class="row">
         <div class="col-md-3">
             <div class="input-group">
-                    <input type="text" ng-model="$ctrl.searchtext" class="form-control" style="border-radius:0" placeholder="Search product name" id="inputGroup">
+                    <input type="text" ng-model="searchtext" class="form-control" style="border-radius:0" placeholder="Search product name" id="inputGroup">
                     <span class="input-group-addon">
                         <i class="glyphicon glyphicon-search"></i>
                     </span>
              </div><br>
              <label>Filters :</label>
              <hr />
-            <label for="chkPriceAsc"><input type="radio" id="chkPriceAsc" name="chkPrice" ng-click="$ctrl.filterBy('Price','ASC')"> Price : Low to High <label>
-            <label for="chkPriceDesc"> <input type="radio" id="chkPriceDesc" name="chkPrice"  ng-click="$ctrl.filterBy('Price','DESC')"> Price : High to Low <label>
-            <label for="chkNameAsc"> <input type="radio" id="chkNameAsc" name="chkName" ng-click="$ctrl.filterBy('Name','ASC')"> Name : A to Z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>
-            <label for="chkNameDesc"> <input type="radio" id="chkNameDesc" name="chkName" ng-click="$ctrl.filterBy('Name','DESC')"> Name : Z to A <label>
+            <label for="chkPriceAsc"><input type="radio" id="chkPriceAsc" name="chkPrice" ng-click="filterBy('Price','ASC')"> Price : Low to High <label>
+            <label for="chkPriceDesc"> <input type="radio" id="chkPriceDesc" name="chkPrice"  ng-click="filterBy('Price','DESC')"> Price : High to Low <label>
+            <label for="chkNameAsc"> <input type="radio" id="chkNameAsc" name="chkName" ng-click="filterBy('Name','ASC')"> Name : A to Z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>
+            <label for="chkNameDesc"> <input type="radio" id="chkNameDesc" name="chkName" ng-click="filterBy('Name','DESC')"> Name : Z to A <label>
         </div>
         <div class="col-md-9">
-            <div class="col-md-3 text-center" ng-repeat="product in $ctrl.products | OrderObjectBy:orderByProp:direction | filter:searchtext">
+            <div class="col-md-3 text-center" ng-repeat="product in products | OrderObjectBy:orderByProp:direction | filter:searchtext">
                 <div class="thumbnail" style="border: 1px solid #9badb4;border-top:5px solid #9badb4;border-radius:0">
                      <img class="image" src="/images/product-icon.png" alt=".." />
                     <div class="caption">

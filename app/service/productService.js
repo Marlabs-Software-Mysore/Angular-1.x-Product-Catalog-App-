@@ -15,6 +15,7 @@ angular.module('mystore')
     
     // Get Products
     this.GetProducts = function() {
+        debugger;
         var savedprod = localStorageService.get("products");
         var products = savedprod!==null?JSON.parse(savedprod):null;
         var deferred = $q.defer();
