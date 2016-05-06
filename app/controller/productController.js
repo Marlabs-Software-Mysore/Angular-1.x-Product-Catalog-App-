@@ -12,6 +12,7 @@
         
         Initialization();
         
+        //Initialization function
         function Initialization () {
             var promise = productService.GetProducts();
             promise.then(function (response) {
