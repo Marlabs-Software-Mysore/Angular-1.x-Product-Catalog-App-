@@ -11,19 +11,19 @@
              </div><br>
              <label>Filters :</label>
              <hr />
-            <label for="chkPriceAsc"><input type="radio" id="chkPriceAsc" name="chkPrice" ng-click="filterBy('Price','ASC')"> Price : Low to High <label>
-            <label for="chkPriceDesc"> <input type="radio" id="chkPriceDesc" name="chkPrice"  ng-click="filterBy('Price','DESC')"> Price : High to Low <label>
+            <label for="chkPriceAsc"><input type="radio" id="chkPriceAsc" name="chkPrice" ng-click="filterBy('Description','ASC')"> Price : Low to High <label>
+            <label for="chkPriceDesc"> <input type="radio" id="chkPriceDesc" name="chkPrice"  ng-click="filterBy('Description','DESC')"> Price : High to Low <label>
             <label for="chkNameAsc"> <input type="radio" id="chkNameAsc" name="chkName" ng-click="filterBy('Name','ASC')"> Name : A to Z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>
             <label for="chkNameDesc"> <input type="radio" id="chkNameDesc" name="chkName" ng-click="filterBy('Name','DESC')"> Name : Z to A <label>
         </div>
         <div class="col-md-9">
-            <div class="col-md-3 text-center" ng-repeat="product in products | OrderObjectBy:orderByProp:direction | filter:searchtext">
+            <div class="col-md-3 text-center" ng-repeat="product in ProductCatlogDB | OrderObjectBy:orderByProp:direction | filter:searchtext">
                 <div class="thumbnail" style="border: 1px solid #9badb4;border-top:5px solid #9badb4;border-radius:0">
                      <img class="image" src="/images/product-icon.png" alt=".." />
                     <div class="caption">
                         <h3>{{product.Name}}</h3>
-                         <h3>{{product.Price | currency}}</h3>
-                        <p>{{product.Description}}</p>
+                         <h3>{{product.Description | currency}}</h3>
+                        <p>{{product.Price}}</p>
                     </div>
                 </div>
             </div>

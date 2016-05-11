@@ -2,9 +2,9 @@
 angular.module('mystore')
     .controller('productController', ["$scope",'$location',"productService",
      function($scope,$location,productService) {
-     $scope.products = productService.GetProducts();
+     $scope.ProductCatlogDB = productService.GetProducts();
      $scope.message = "";
-     $scope.newProduct = {};
+     $scope.product = {};
      
      $scope.orderByProp = "Price";
      $scope.direction = false;
@@ -16,7 +16,7 @@ angular.module('mystore')
           var promise = productService.GetProducts();
           promise.then(function (response) {
                 if (response !== undefined) {
-                    $scope.products = response;
+                    $scope.ProductCatlogDB = response;
                     //console.log(response);
                 }
          }, function (err) {
@@ -31,10 +31,9 @@ angular.module('mystore')
       
       
       $scope.AddProduct =function() {
-           productService.AddProduct($scope.newProduct);
-           //$scope.newProduct = { Name:"",Description:"",Price:"" };
+           productService.AddProduct($scope.product);
            $scope.message = "Product added successfully";
-           $location.path("/products");
+           $location.path("/ProductCatlogDB");
            
       }
 }]);

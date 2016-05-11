@@ -1,37 +1,20 @@
 angular.module('mystore')
-    .service('productService',['$q','$http','localStorageService',function($q, $http,localStorageService) {
-        
-    this.AddProduct = function(newProduct) {
-        var savedprod = localStorageService.get("products");
-        var products = savedprod!==null?JSON.parse(savedprod):null;
-        if(products==null){
-            localStorageService.set("products",JSON.stringify(newProduct));
-        }
-        else{
-            products.push(newProduct);
-            localStorageService.set("products",JSON.stringify(products));
-        }
-    }
-    
+    .service('productService',['$q','$http',function($q, $http) {
     // Get Products
     this.GetProducts = function() {
-        debugger;
-        var savedprod = localStorageService.get("products");
-        var products = savedprod!==null?JSON.parse(savedprod):null;
         var deferred = $q.defer();
-        if(products==null){
-             $http.get('/app/data/product.json')
-            .success(function(response){
-                localStorageService.set("products",JSON.stringify(response.products));
-                deferred.resolve(response.products);
-            })
-            .error(function(response) {
-                deferred.reject(response);
-            });
-        }
-        else{
-            deferred.resolve(products);
-        }
-        return deferred.promise;
+        $http.get('/ProductCatlogDB').success(function(response){
+            var ProductCatlogDB = response;
+            console.log(response);
+            deferred.resolve(response);
+      });
+         return deferred.promise;
+    }
+
+    this.AddProduct = function(product){
+        console.log(product);
+        $http.post('/ProductCatlogDB',product).success(function(response){
+      });
     }
 }]);
+ 
