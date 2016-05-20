@@ -1,6 +1,6 @@
 # Angular-1.x-App-With-MongoDB
 
-This is product catalog display application, developed using angular1.x and routing components
+This is product catalog display application, developed using angular1.x, routing components and mongo db as a backend database.
 
 # Features - 
 1. Add Product.
