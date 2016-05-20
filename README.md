@@ -16,6 +16,7 @@ This is product catalog display application, developed using angular1.x and rout
 https://docs.mongodb.com/manual/
 
 Steps to install and run mongo db
+
 1. Download and install Mongo Db from given link https://www.mongodb.com/download-center
 2. Open command prompt  as administrator
 3. Through cmd prompt navigate to mongodb installed folder path in C drive and then navigate to bin folder.
