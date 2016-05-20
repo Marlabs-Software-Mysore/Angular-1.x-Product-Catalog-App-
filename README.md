@@ -34,6 +34,18 @@ Commands for Mongodb.
 For more cmd please follow the link given below
 http://www.tutorialspoint.com/mongodb/mongodb_create_database.htm
 
+# System Requirements.
+
+1. MongoDb.
+2. Node.Js.
+
+# Steps to run application
+
+1. Clone the application or download it.
+2. Open the cloned application directory.
+3. Open node cmd prompt and run "npm install" cmd.
+4. Use "npm start" cmd to run application.
+
 
 
 
