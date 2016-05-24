@@ -8,6 +8,7 @@ angular.module('mystore')
      
      $scope.orderByProp = "Price";
      $scope.direction = false;
+     $scope.status = "";
      
      
      Initialization();
@@ -33,7 +34,7 @@ angular.module('mystore')
       $scope.AddProduct =function() {
            productService.AddProduct($scope.product);
            $scope.message = "Product added successfully";
-           $location.path("/ProductCatlogDB");
-           
+           $scope.status = "Added";
+           $location.path("/");
       }
 }]);
