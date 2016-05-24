@@ -7,7 +7,7 @@ describe('Test : productService', function() {
     beforeEach(module('mystore'));
     
     beforeEach(inject(function(_productService_, _$httpBackend_) {
-        productApiUrl = '/app/data/product.json';
+        productApiUrl = '/ProductCatlogDB';
         // Test data
         testProduct = {Id:"1", Name:"Engine",Description:"BMW Engine",Price:"129.00"};
         testProducts = [testProduct];
