@@ -1,4 +1,4 @@
-describe('my Store productCtrl', function () {
+describe('Test : ProductController', function () {
 
   beforeEach(module('mystore'));
 
@@ -30,8 +30,8 @@ describe('my Store productCtrl', function () {
     $location = _$location_;
   }));
   
-  describe('Insert Product Unit Test', function () {
-		it('Add Product', function () {
+  describe('Test Method : Insert Product Unit Test', function () {
+		it('Test Case : Add Product', function () {
 			var $scope = {};
 			var controller = $controller('productController', 
                                 { $scope: $scope , $location: $location, productService: productService });
@@ -42,8 +42,8 @@ describe('my Store productCtrl', function () {
 		});	
     });
     
-    describe('Get Products Unit Test', function () {
-		it('Get Products', function () {
+    describe('Test Method : Get Products Unit Test', function () {
+		it('Test Case : Get Products', function () {
 			var $scope = {};
             
 			var controller = $controller('productController', { $scope: $scope , $location: $location, productService: productService });
