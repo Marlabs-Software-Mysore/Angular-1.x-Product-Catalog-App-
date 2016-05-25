@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Angular Application</title>
+    <title>Angular Application</title>   
     <link href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />   
     <script src="js/jquery-2.2.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>     
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <!--<script src="js/angular.min.js"></script> -->
     <script src="js/angular-route.min.js"></script> 
-    <script src="js/angular-local-storage.min.js"></script> 
-    
+    <script src="js/angular-local-storage.min.js"></script>     
     <script src="app/app.js" type="text/javascript"></script>
     <script src="app/controller/productController.js" type="text/javascript"></script>
     <script src="app/service/productService.js" type="text/javascript"></script>
-    <script src="app/filters/orderByObjectProp.js" type="text/javascript"></script>
+    <script src="app/filters/orderByObjectProp.js" type="text/javascript"></script>   
+    <style type="text/css">
+     .container
+     {
+       width:100% !important;
+       padding: 0px 25px 0px 25px;
+     }
+    </style>
+   
 </head>
 <body ng-app="mystore" ng-cloak>
   <nav class="navbar navbar-inverse" style="margin-bottom:0px;">
@@ -27,19 +34,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" style="color:#fff;margin-left:0px;">Angular-1x app demo</a>
+      <a class="navbar-brand" href="#" style="color:#fff;margin-left:15px;">Angular-1x Framework Application</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" style="margin-right:0px;">
         <li><a href="#/add-product" style="color:#fff">Add Product</a></li>
         <li><a href="#/products" style="color:#fff">View Products</a></li>
       </ul>
       
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+  </div><!-- /.container -->
 </nav>
     <div class="container">
          <div ng-view="">
