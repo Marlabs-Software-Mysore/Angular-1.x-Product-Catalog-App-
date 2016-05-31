@@ -1,6 +1,11 @@
-# Angular-1.x-App-With-MongoDB
+# Angular-1.x-App-With-MongoDB-KarmaJasmine-Unit Testing
 
 This is product catalog display application, developed using angular1.x, routing components and mongo db as a backend database.
+
+# System Requirements.
+
+1. MongoDb.
+2. Node.Js.
 
 # Steps to run application
 
@@ -9,10 +14,11 @@ This is product catalog display application, developed using angular1.x, routing
 3. Open node cmd prompt and run "npm install" cmd.
 4. Use "npm start" cmd to run application.
 
-# System Requirements.
+#Steps to run unit test cases.
 
-1. MongoDb.
-2. Node.Js.
+1. Open node cmd prompt and run "karma start --single-run"
+2. Then you can see the test results in cmd prompt.
+3. To check code coverage, you can go to codecoverage folder generated in root directory, open index.html.
 
 # Features - 
 1. Add Product.
