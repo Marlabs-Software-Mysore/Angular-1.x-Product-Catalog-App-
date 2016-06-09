@@ -26,7 +26,7 @@ app.get('/'+dbName,function(req,res){
 	// var contactlist =[userOne,userTwo,userThree];
    // res.json(contactlist);		
 	db.ProductCatlogDB.find(function(err,docs){
-		console.log(docs);
+		//console.log(docs);
 		res.json(docs);
 	});
 
@@ -34,7 +34,7 @@ app.get('/'+dbName,function(req,res){
 
 // add new entry into db
 app.post('/'+dbName,function(req,res){
-	console.log(req.body);
+	//console.log(req.body);
 db.ProductCatlogDB.insert(req.body,function(err,doc){
 	res.json(doc);
 });	
@@ -44,7 +44,7 @@ db.ProductCatlogDB.insert(req.body,function(err,doc){
 // edit operation for existing entry
 app.get('/ProductCatlogDB/:id',function(req,res){
 	var id = req.params.id;
-	console.log(id);
+	//console.log(id);
 	db.ProductCatlogDB.findOne({_id:mongojs.ObjectId(id)},function(err,doc){
 		res.json(doc);
 	});
@@ -54,7 +54,7 @@ app.get('/ProductCatlogDB/:id',function(req,res){
 // delete operation for specific entry
 app.delete('/ProductCatlogDB/:id',function(req,res){
 	var id=req.params.id;
-	console.log(id);
+	//console.log(id);
 	db.ProductCatlogDB.remove({_id:mongojs.ObjectId(id)},function(err,doc){
 		res.json(doc);
 	});

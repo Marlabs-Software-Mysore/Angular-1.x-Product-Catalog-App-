@@ -6,30 +6,27 @@
 <div class="container">
     <h2>Add Product</h2>
     <div class="col-md-4">
-        
-     <form class="form-horizontal" name="form" role="form" novalidate>
+      <form class="form-horizontal" name="form" role="form" novalidate >
             <div class="alert alert-success" ng-show="message!=''">{{message}}</div>
+                <div class="form-group">
+                     <label class="control-label">Name</label>
+                     <input type="text" class="form-control" ng-model="product.name" id="Name" name="Name" placeholder="Product Name" required />
+                     <span class="error" ng-show="form.Name.$touched && form.Name.$invalid">Please enter product name</span>
+                </div>
             <div class="form-group">
-                <label class="control-label">Product Name</label>
-                <input type="text" class="form-control" ng-model="product.Name" id="Name" name="Name" placeholder="Product Name" required />
-                <span class="error" ng-show="form.Name.$touched && form.Name.$invalid">Please enter product name</span>
-            </div>
-            <div class="form-group">
-                <label class="control-label">Description</label>
-                <textarea ng-model="product.Description" name="description" id="description" class="form-control" placeholder="Product Description" required cols="30" rows="06"></textarea>
+                <label class="control-label">Short Description</label>
+                <textarea ng-model="product.shortDescription" name="sdescription" id="sdescription" class="form-control" placeholder="Short Description" required cols="30" rows="03"></textarea>
                 <span class="error" ng-show="form.description.$touched && form.description.$invalid">Please enter product description</span>
             </div>
             <div class="form-group" >
-                <label class="control-label">Price(Per Unit)</label>
-                <input type="number" class="form-control" ng-model="product.Price" id="price" name="price" placeholder="Product Price" required />
-                <span class="error" ng-show="form.price.$touched && form.price.$invalid">Please enter product price</span>
+                <label class="control-label">Long Description</label>
+                <textarea ng-model="product.longDescription" name="ldescription" id="ldescription" class="form-control" placeholder="Long Description" required cols="30" rows="06"></textarea>
+                <span class="error" ng-show="form.description.$touched && form.description.$invalid">Please enter product description</span>
             </div>
             <div class="form-group">
-            <button class="btn btn-primary right" ng-disabled="form.$invalid" ng-click="AddProduct()">
-               Add 
-            </button>
-            <a href="#/" class="btn btn-link">Cancel</a> 
-            </div>   
+                <button class="btn btn-primary right" ng-disabled="form.$invalid" ng-click="AddProduct()">Add </button>           
+                <a href="#/" class="btn btn-link">Cancel</a>
+            </div>
     </form>
-    </div>
-</div>
+   </div>
+ </div>
