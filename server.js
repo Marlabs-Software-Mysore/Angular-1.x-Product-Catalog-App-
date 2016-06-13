@@ -79,6 +79,6 @@ app.get('/', function(req, res) {
    res.sendFile(path.join(__dirname + '/app/Views/index.html'));
 });
  // host app  port number call
-app.listen(8050);
+app.listen(8030);
 // check for server hitting
-console.log("server is runing on port no 8050");
+console.log("server is runing on port no 8030");
