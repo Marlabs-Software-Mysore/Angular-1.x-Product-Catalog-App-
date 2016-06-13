@@ -15,10 +15,10 @@ This is product catalog display application, developed using angular1.x, routing
 4. Use "npm start" cmd to run application.
 
 #Steps to run unit test cases.
-
-1. Open node cmd prompt and run "karma start --single-run"
-2. Then you can see the test results in cmd prompt.
-3. To check code coverage, you can go to codecoverage folder generated in root directory, open index.html.
+1. Open node cmd prompt and install "npm install -g karma", "npm install -g karma-cli", "npm install -g karma-coverage".
+2. Open node cmd prompt and run "karma start --single-run"
+3. Then you can see the test results in cmd prompt.
+4. To check code coverage, you can go to codecoverage folder generated in root directory, open index.html.
 
 # Features - 
 1. Add Product.
