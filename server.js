@@ -8,7 +8,7 @@ var mongojs=require('mongojs');
 var path = require('path');
 var bodyParser = require('body-parser');
 //call db with name contactlist
-var db=mongojs(dbName,[dbName]);
+var db = mongojs(dbName,[dbName]);
 
 // index page call
 app.use(express.static(__dirname+ "/"));
@@ -17,14 +17,8 @@ app.use(bodyParser.json());
 
 // get all records from db
 app.get('/'+dbName,function(req,res){
-	console.log("from server data");
-	
-	 // var userOne = {name:"UserOne",email:"userone@mail.com",number:"333-333-3333"};
-	// var userTwo = {name:"UserTwo",email:"usertwo@mail.com",number:"444-444-4444"};
-	// var userThree = {name:"UserThree",email:"userthree@mail.com",number:"555-555-5555"};
-	
-	// var contactlist =[userOne,userTwo,userThree];
-   // res.json(contactlist);		
+	//console.log("from server data");
+		
 	db.ProductCatlogDB.find(function(err,docs){
 		//console.log(docs);
 		res.json(docs);
