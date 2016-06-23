@@ -36,8 +36,8 @@ describe('Test : ProductController', function () {
 			var controller = $controller('productController', 
                                 { $scope: $scope , $location: $location, productService: productService });
                                 
-            $scope.newProduct = {"Id":"1", "Name":"Engine","Description":"BMW Engine","Price":"129.00"};
-            $scope.AddProduct();
+            $scope.product = {"Id":"1", "Name":"Engine","Description":"BMW Engine","Price":"129.00"};
+            $scope.AddProduct($scope.product);
             expect($scope.status).toEqual('Added');
 		});	
    
