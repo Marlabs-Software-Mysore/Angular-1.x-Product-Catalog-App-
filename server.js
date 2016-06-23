@@ -23,7 +23,6 @@ app.get('/'+dbName,function(req,res){
 		//console.log(docs);
 		res.json(docs);
 	});
-
 });
 
 // add new entry into db

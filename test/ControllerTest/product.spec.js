@@ -30,7 +30,7 @@ describe('Test : ProductController', function () {
     $location = _$location_;
   }));
   
-  describe('Test Method : Insert Product Unit Test', function () {
+  
 		it('Test Case : Add Product', function () {
 			var $scope = {};
 			var controller = $controller('productController', 
@@ -40,9 +40,8 @@ describe('Test : ProductController', function () {
             $scope.AddProduct();
             expect($scope.status).toEqual('Added');
 		});	
-    });
+   
     
-    describe('Test Method : Get Products Unit Test', function () {
 		it('Test Case : Get Products', function () {
 			var $scope = {};
             
@@ -51,5 +50,4 @@ describe('Test : ProductController', function () {
             expect($scope.orderByProp).toEqual('Name');
             expect($scope.direction).toEqual(true);
 		});	
-    });
 });
