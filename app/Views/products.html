@@ -156,11 +156,12 @@
            <div class="col-md-4"  ng-repeat="product in ProductCatlogDB | OrderObjectBy:orderByProp:direction | filter:searchtext" ng-mouseenter="hover(product)" ng-mouseleave="hover(product)">
                <div class="card">
                   <div class="card-image">
-                    <img class="image-thumbnail img-responsive" ng-src="{{product.ImageUrl}}"  alt="no-image"/>
+                    <img class="image-thumbnail img-responsive" ng-src="{{product.ImageUrl}}"  alt="no-image"  height="180px"/>
                        <span class="card-title">{{product.name}}</span>
                  </div>
         <div class="card-content">
-              <p class="text-muted" style="text-align:left" title="{{product.shortDescription}}" ng-bind-html="highlight(product.shortDescription, searchtext)"><span>{{product.shortDescription}}</span></p>
+              <p class="text-muted" style="text-align:left" title="{{product.shortDescription | limitTo :120}}" ng-bind-html="highlight(product.shortDescription | limitTo :120, searchtext)"> <span>{{product.shortDescription | limitTo :120}}</span></p>
+             
         </div>
         <div class="card-action">
             <div class="pull-left">
@@ -175,7 +176,6 @@
     </div>
     </div>
 </div>
-
-           </div>
       </div>
-  </div>
+      </div>
+      </div>
