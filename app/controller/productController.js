@@ -9,12 +9,13 @@ angular.module('mystore')
      $scope.orderByProp = "Price";
      $scope.direction = false;
      $scope.status = "";       
-      $scope.showDelete= false,
+     $scope.showDelete= false,
      $scope.show= true;
-       $scope.hover = function(product) {
-        // Shows/hides the delete button on hover
-      return product.showDelete = ! product.showDelete;
-    };
+
+     $scope.hover = function(product) {
+            // Shows/hides the delete button on hover
+        return product.showDelete = ! product.showDelete;
+     };
      Initialization();
       
       function Initialization () {
@@ -23,8 +24,6 @@ angular.module('mystore')
                 if (response !== undefined) {
                     $scope.ProductCatlogDB = response;
                     //console.log(response);
-             
-             
                 }
          }, function (err) {
              $scope.message = err.error_description;
@@ -38,11 +37,11 @@ angular.module('mystore')
       }
       
       $scope.highlight = function(text, search) {
-    if (!search) {
-        return $sce.trustAsHtml(text);
-    }
-    return $sce.trustAsHtml(text.replace(new RegExp(search, 'gi'), '<span class="highlightedText">$&</span>'));
-};
+            if (!search) {
+                return $sce.trustAsHtml(text);
+            }
+            return $sce.trustAsHtml(text.replace(new RegExp(search, 'gi'), '<span class="highlightedText">$&</span>'));
+      };
             
       $scope.AddProduct =function() {
           debugger;

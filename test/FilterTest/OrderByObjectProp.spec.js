@@ -12,12 +12,12 @@ describe('Test : OrderByObjectPropFilter Test', function() {
                             {"Id":"3", "Name":"Pipe","Description":"Fuel Pipe","Price":"132.00"}];
     }));
     
-    it('Test Case : Order By Name ASC order', function() {
+    it('Test Case : Order By Name DESC order', function() {
         var FilteredProducts = OrderObjectBy(testProducts, "Name", true);
         expect(FilteredProducts[0].Name).toEqual(testProducts[2].Name);
     });
     
-    it('Test Case : Order By Name DESC order', function() {
+    it('Test Case : Order By Name ASC order', function() {
         var FilteredProducts = OrderObjectBy(testProducts, "Name", false);
         expect(FilteredProducts[0].Name).toEqual(testProducts[1].Name);
     });
