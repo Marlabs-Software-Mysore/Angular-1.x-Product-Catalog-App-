@@ -4,7 +4,7 @@
   "description": "Hello App",
   "main": "Index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm install && karma start --single-run && npm start | webdriver-manager start | protractor protractorconf.js"
   },
   "author": "",
   "license": "ISC",

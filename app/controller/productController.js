@@ -24,10 +24,7 @@ angular.module('mystore')
           promise.then(function (response) {
                 if (response !== undefined) {
                     $scope.ProductCatlogDB = response;
-<<<<<<< HEAD
                     //console.log(response);
-=======
->>>>>>> 35355cc3037b6a66c43edd53635390970c2012eb
                 }
          }, function (err) {
              $scope.message = err.error_description;

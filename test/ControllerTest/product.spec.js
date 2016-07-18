@@ -30,24 +30,24 @@ describe('Test : ProductController', function () {
     $location = _$location_;
   }));
   
-  
-		it('Test Case : Add Product', function () {
-			var $scope = {};
-			var controller = $controller('productController', 
-                                { $scope: $scope , $location: $location, productService: productService });
-                                
-            $scope.product = {"Id":"1", "Name":"Engine","Description":"BMW Engine","Price":"129.00"};
-            $scope.AddProduct($scope.product);
-            expect($scope.status).toEqual('Added');
-		});	
-   
-    
-		it('Test Case : Get Products', function () {
-			var $scope = {};
-            
-			var controller = $controller('productController', { $scope: $scope , $location: $location, productService: productService });
-            $scope.filterBy("Name", true);
-            expect($scope.orderByProp).toEqual('Name');
-            expect($scope.direction).toEqual(true);
-		});	
+
+    it('Test Case : Add Product', function () {
+        var $scope = {};
+        var controller = $controller('productController', 
+                            { $scope: $scope , $location: $location, productService: productService });
+                            
+        $scope.product = {"Id":"1", "Name":"Engine","Description":"BMW Engine","Price":"129.00"};
+        $scope.AddProduct($scope.product);
+        expect($scope.status).toEqual('Added');
+    });	
+
+
+    it('Test Case : Get Products', function () {
+        var $scope = {};
+        
+        var controller = $controller('productController', { $scope: $scope , $location: $location, productService: productService });
+        $scope.filterBy("Name", true);
+        expect($scope.orderByProp).toEqual('Name');
+        expect($scope.direction).toEqual(true);
+    });	
 });

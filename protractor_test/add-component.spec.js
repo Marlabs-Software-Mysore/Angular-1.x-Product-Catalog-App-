@@ -18,11 +18,8 @@ describe('Protractor Angular App', function() {
     });
     
     it('should add component', function() {
-<<<<<<< HEAD
+
         browser.get('http://localhost:8033/');
-=======
-        browser.get('http://localhost:8030/');
->>>>>>> 35355cc3037b6a66c43edd53635390970c2012eb
         
         element(by.id('lnkAddComp')).click();
 
@@ -30,15 +27,8 @@ describe('Protractor Angular App', function() {
         element(by.model('product.shortDescription')).sendKeys("Short Description");
         element(by.model('product.longDescription')).sendKeys("Long Description");
         element(by.id('btnAdd')).click();
-        // expect(element(by.binding('latest')).getText()).toEqual('5'); // This is wrong!
-        //expect(browser.getTitle()).toEqual('Angular Application');
-        //expect(browser.getCurrentUrl()).toMatch(/\//);
-<<<<<<< HEAD
-        var elemsAfter = element.all(by.repeater('product in ProductCatlogDB'));
-        expect(elemsAfter.count()).toBe(4);
-=======
+
         var elems = element.all(by.repeater('product in ProductCatlogDB'));
         expect(elems.count()).toBe(6);
->>>>>>> 35355cc3037b6a66c43edd53635390970c2012eb
     });
 });
