@@ -20,6 +20,13 @@ This is product catalog display application, developed using angular1.x, routing
 3. Then you can see the test results in cmd prompt.
 4. To check code coverage, you can go to codecoverage folder generated in root directory, open index.html.
 
+#Steps to run end to end testing using protractor.
+1. You will need to have the Java Development Kit (JDK) installed to run the standalone Selenium Server. Check this by running java -version from the command line.
+2. Open node cmd prompt and install "npm install -g protractor", "webdriver-manager update", "webdriver-manager start".
+3. Make sure that Selenium server is running on http://localhost:4444/wd/hub.
+4. Open node cmd prompt and run "protractor protractorconf.js"
+5. Then you can see the test results in cmd prompt.
+
 # Features - 
 1. Add Product.
 2. Product Listing with Filters and Search.

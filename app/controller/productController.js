@@ -1,9 +1,10 @@
 
 angular.module('mystore')
-    .controller('productController', ["$scope",'$location',"productService", "$routeParams","$sce",
-     function($scope,$location,productService,$routeParams,$sce) {
+    .controller('productController', ["$scope",'$location',"productService", "$routeParams","$sce","toastr",
+     function($scope,$location,productService,$routeParams,$sce,toastr) {
      $scope.ProductCatlogDB = productService.GetProducts();
      $scope.message = "";
+     $scope.delMessage = "";
      $scope.product = {};
      
      $scope.orderByProp = "Price";
@@ -23,7 +24,10 @@ angular.module('mystore')
           promise.then(function (response) {
                 if (response !== undefined) {
                     $scope.ProductCatlogDB = response;
+<<<<<<< HEAD
                     //console.log(response);
+=======
+>>>>>>> 35355cc3037b6a66c43edd53635390970c2012eb
                 }
          }, function (err) {
              $scope.message = err.error_description;
@@ -44,19 +48,22 @@ angular.module('mystore')
       };
             
       $scope.AddProduct =function() {
-          debugger;
            $scope.product.ImageUrl="/images/defaultUser.png"
-           productService.AddProduct($scope.product);
-           $scope.message = "Product added successfully";
-           $scope.status = "Added";
+           productService.AddProduct($scope.product);      
+           $scope.message = "Component added successfully";
+           toastr.success($scope.message );
+           $scope.status = "Added";          
            Initialization();
            $location.path("/");
+            
       }
       
      // delete product
         $scope.remove=function(id){
         // console.log(id);
             productService.removeProduct(id);
+              $scope.delMessage = "Component deleted successfully";
+             toastr.success($scope.delMessage);
                 Initialization();
                 $location.path("/");
         }
