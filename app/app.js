@@ -1,4 +1,4 @@
-var app = angular.module('mystore',['ngRoute','ngSanitize',,'ngOrderObjectBy', 'LocalStorageModule','ngAnimate', 'toastr']);
+var app = angular.module('mystore',['ngRoute','ngSanitize','ngOrderObjectBy', 'LocalStorageModule', 'toastr']);
 
 app.config(['$routeProvider',
   function ($routeProvider) {

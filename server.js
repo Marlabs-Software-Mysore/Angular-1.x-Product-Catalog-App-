@@ -69,7 +69,7 @@ app.delete('/ProductCatlogDB/:id',function(req,res){
 });
 
 app.get('/', function(req, res) {
-   res.sendFile(path.join(__dirname + '/app/Views/index.html'));
+   res.sendFile(path.join(__dirname + '/app/index.html'));
 });
  // host app  port number call
 app.listen(8033);

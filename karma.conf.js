@@ -7,24 +7,36 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
-
+    customLaunchers: {
+      // chrome setup for travis CI using chromium
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-
+    plugins: [
+            'karma-jasmine',
+            'karma-coverage',
+            'karma-chrome-launcher',
+            'karma-firefox-launcher'
+    ],
     // list of files / patterns to load in the browser
     files: [
-      'node_modules/angular/angular.js',
-      'node_modules/angular-route/angular-route.js',
-      'node_modules/angular-local-storage/src/angular-local-storage.js',
-      'node_modules/angular-mocks/angular-mocks.js',
-      'app/*.js',
-      'app/**/*.js',
-      'app/**/*.html',
-      'test/ControllerTest/*.spec.js',
-      'test/ServiceTest/*.spec.js',
-      'test/FilterTest/*.spec.js'
+      { pattern: 'js/jquery-2.2.2.min.js', included: true, watched: false },
+      { pattern: 'node_modules/angular/angular.js', included: true, watched: false },
+      { pattern: 'node_modules/angular-route/angular-route.js', included: true, watched: false },
+      { pattern: 'node_modules/angular-local-storage/src/angular-local-storage.js', included: true, watched: false },
+      { pattern: 'node_modules/angular-mocks/angular-mocks.js', included: true, watched: false },
+      { pattern: 'app/**/*.js', included: true, watched: false },
+      { pattern: 'app/**/*.html', included: true, watched: false },
+      { pattern: 'app/*.js', included: true, watched: false },
+      { pattern: 'test/ControllerTest/*.spec.js', included: true, watched: false },
+      { pattern: 'test/ServiceTest/*.spec.js', included: true, watched: false },
+      { pattern: 'test/FilterTest/*.spec.js', included: true, watched: false }
     ],
 
 
@@ -70,15 +82,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Chrome_without_security'],
-
-     // you can define custom flags 
-    customLaunchers: {
-      Chrome_without_security: {
-        base: 'Chrome',
-        flags: ['--disable-web-security']
-      } 
-    },
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
