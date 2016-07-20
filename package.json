@@ -4,7 +4,7 @@
   "description": "Hello App",
   "main": "Index.html",
   "scripts": {
-    "test": "npm install && npm start | webdriver-manager start | protractor protractorconf.js"
+    "test": "npm install && npm start & webdriver-manager start & protractor protractorconf.js"
   },
   "author": "",
   "license": "ISC",
