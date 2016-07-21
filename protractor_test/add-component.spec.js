@@ -29,6 +29,6 @@ describe('Protractor Angular App', function() {
         element(by.id('btnAdd')).click();
 
         var elems = element.all(by.repeater('product in ProductCatlogDB'));
-        expect(elems.count()).toBe(6);
+        expect(elems.count()).toBe(8);
     });
 });

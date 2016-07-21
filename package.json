@@ -4,9 +4,10 @@
   "description": "Hello App",
   "main": "Index.html",
   "scripts": {
-    "app": "npm install && npm start",
-    "webdriver":"webdriver-manager start",
-    "test":"karma start --single-run && protractor protractorconf.js"
+    "app": "npm install && karma start --single-run && protractor protractorconf.js",
+    "webdriver": "webdriver-manager start",
+    "test": "npm run webdriver && npm start && protractor protractorconf.js",
+    "dev": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run app\" \"npm run webdriver\" \"npm run test\""
   },
   "author": "",
   "license": "ISC",
@@ -21,11 +22,12 @@
   },
   "devDependencies": {
     "angular-mocks": "^1.5.7",
+    "concurrently": "^2.2.0",
     "jasmine-core": "^2.4.1",
     "karma": "^1.1.1",
     "karma-chrome-launcher": "1.0.1",
-    "karma-firefox-launcher": "1.0.0",
     "karma-coverage": "^1.0.0",
+    "karma-firefox-launcher": "1.0.0",
     "karma-ie-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2"
   }
