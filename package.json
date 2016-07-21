@@ -4,7 +4,7 @@
   "description": "Hello App",
   "main": "Index.html",
   "scripts": {
-    "app": "npm install && karma start --single-run && protractor protractorconf.js",
+    "app": "npm install && protractor protractorconf.js",
     "webdriver": "webdriver-manager start",
     "test": "npm run webdriver && npm start && protractor protractorconf.js",
     "dev": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run app\" \"npm run webdriver\" \"npm run test\""
