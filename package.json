@@ -4,10 +4,9 @@
   "description": "Hello App",
   "main": "Index.html",
   "scripts": {
-    "app": "npm install && protractor protractorconf.js",
+    "dev": "npm install && karma start --single-run",
     "webdriver": "webdriver-manager start",
-    "test": "npm run webdriver && npm start && protractor protractorconf.js",
-    "dev": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run app\" \"npm run webdriver\" \"npm run test\""
+    "uitest": "npm run webdriver && npm start && protractor protractorconf.js"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +28,7 @@
     "karma-coverage": "^1.0.0",
     "karma-firefox-launcher": "1.0.0",
     "karma-ie-launcher": "^1.0.0",
+    "karma-phantomjs-launcher":"^1.0.1",
     "karma-jasmine": "^1.0.2"
   }
 }

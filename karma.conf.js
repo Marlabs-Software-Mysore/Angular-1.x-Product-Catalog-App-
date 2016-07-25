@@ -31,9 +31,9 @@ module.exports = function(config) {
       { pattern: 'node_modules/angular-route/angular-route.js', included: true, watched: false },
       { pattern: 'node_modules/angular-local-storage/src/angular-local-storage.js', included: true, watched: false },
       { pattern: 'node_modules/angular-mocks/angular-mocks.js', included: true, watched: false },
+      { pattern: 'app/*.js', included: true, watched: false },
       { pattern: 'app/**/*.js', included: true, watched: false },
       { pattern: 'app/**/*.html', included: true, watched: false },
-      { pattern: 'app/*.js', included: true, watched: false },
       { pattern: 'test/ControllerTest/*.spec.js', included: true, watched: false },
       { pattern: 'test/ServiceTest/*.spec.js', included: true, watched: false },
       { pattern: 'test/FilterTest/*.spec.js', included: true, watched: false }
